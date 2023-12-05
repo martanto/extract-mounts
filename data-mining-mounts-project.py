@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Data mining untuk Thermal dan SO2 dari web http://mounts-project.com
-# ---
-
 # ## Import Modules python yang dibutuhkan
 # Adapun module yang digunakan antara lain:
 # 1. Module `requests` digunakan untuk membuka web http://mounts-project.com
@@ -13,7 +10,7 @@
 # 5. Module `os` digunakan untuk mendapatkan directory dan file
 # 6. Module `JSON` digunakan untuk display data JSON
 
-# In[1]:
+# In[ ]:
 
 
 import requests
@@ -28,15 +25,16 @@ from datetime import datetime
 # ## Inisiasi Variable yang Dibutuhkan
 # Inisiasi variable untuk web http://mounts-project.com
 
-# In[2]:
+# In[ ]:
 
 
 mounts_url = 'http://mounts-project.com/timeseries/'
+use_filter = True
 
 
 # Inisiasi variable untuk `output_directory` tempat hasil ekstrak data disimpan
 
-# In[3]:
+# In[ ]:
 
 
 output_directory = os.path.join(os.getcwd(), 'output')
@@ -44,7 +42,7 @@ output_directory = os.path.join(os.getcwd(), 'output')
 output_directory
 
 
-# In[4]:
+# In[ ]:
 
 
 if (not os.path.exists(output_directory)):
@@ -54,10 +52,14 @@ if (not os.path.exists(output_directory)):
 # Variable `volcanoes` merupakan variable kode gunung api berdasarkan ID smithsonian number (https://volcano.si.edu/).  
 # Untuk mendapatkan data beberapa gunung api, masukkan kode gunung api dalam bentuk `list`
 
-# In[5]:
+# In[ ]:
 
 
 volcanoes = [
+    {
+        "name" : "Marapi",
+        "code" : 261140,
+    },
     {
         "name" : "Anak Krakatau",
         "code" : 262000,
@@ -97,7 +99,7 @@ volcanoes = [
 ]
 
 
-# In[6]:
+# In[ ]:
 
 
 for index, volcano in enumerate(volcanoes):
@@ -106,7 +108,7 @@ for index, volcano in enumerate(volcanoes):
 
 # Menginisiasi list kosong untuk menyimpan DataFrame hasil ekstraksi data. List ini akan berisi kumpulan data Thermal dan SO2 dari berbagai gunung api
 
-# In[7]:
+# In[ ]:
 
 
 dataframes = {}
@@ -116,7 +118,7 @@ dataframes = {}
 # ## Inisiasi Fungsi-fungsi yang digunakan untuk extract, transformasi, dan export data
 # Fungsi yang digunakan untuk mengeskstrak variable JSON Thermal dan SO2 dari JavaScript web Mounts Project. Variabel ini tersimpan dengan nama `var_graph`
 
-# In[8]:
+# In[ ]:
 
 
 def get_json_from_javascript(response):
@@ -128,7 +130,7 @@ def get_json_from_javascript(response):
 
 # Hasil dari ekstraksi JSON pada fungsi `get_json_from_javascript` selanjutnya digunakan untuk extraksi nilai **SO2** dan **Thermal**
 
-# In[9]:
+# In[ ]:
 
 
 def get_so2_values(graph_json):
@@ -141,7 +143,7 @@ def get_so2_values(graph_json):
     return so2_df
 
 
-# In[10]:
+# In[ ]:
 
 
 def get_thermal_values(graph_json):
@@ -156,14 +158,14 @@ def get_thermal_values(graph_json):
 
 # Splitting kolom `Date Time` ke `Date` dan `Time`
 
-# In[11]:
+# In[ ]:
 
 
 def convert_to_date(date_time):
     return date_time.strftime("%Y-%m-%d")
 
 
-# In[12]:
+# In[ ]:
 
 
 def convert_to_time(date_time):
@@ -172,7 +174,7 @@ def convert_to_time(date_time):
 
 # Fungsi ini digunakan untuk meng-export data hasil ekstraksi ke dalam format Excel
 
-# In[13]:
+# In[ ]:
 
 
 def export_to_excel(filtered_df, volcano_code, volcano_name):
@@ -186,7 +188,7 @@ def export_to_excel(filtered_df, volcano_code, volcano_name):
 # ## Kode Utama
 # Kode utama ekstraksi data
 
-# In[14]:
+# In[ ]:
 
 
 df_excel = pd.DataFrame()
@@ -218,27 +220,33 @@ for index, volcano in enumerate(volcanoes):
     df['Code'] = volcano_code
     df.set_index('Date time', inplace=True)
     
-    filtered_df = df[df['Value'] > 0.1]
+    filter_value = 0
+    if use_filter:
+        filter_value = 0.1
+    
+    filtered_df = df[df['Value'] > filter_value]
     dataframes[volcano_name] = filtered_df
     
     df_excel = pd.concat([
-        df_excel, pd.DataFrame([{
-            "code" : volcano_code,
-            "volcano_name" : volcano_name,
-            "filename" : export_to_excel(filtered_df, volcano_code, volcano_name),
-            "updated_at" : filtered_df.index.max()
-    }])], ignore_index=True)
+        df_excel, pd.DataFrame([
+            {
+                "code" : volcano_code,
+                "volcano_name" : volcano_name,
+                "filename" : export_to_excel(filtered_df, volcano_code, volcano_name),
+                "updated_at" : filtered_df.index.max()
+            }]
+    )], ignore_index=True)
     
     print("Data untuk gunung api {} berhasil diekstrak, dan disimpan dalam variable dataframes['{}']".format(volcano_name,volcano_name))
 
 
-# In[15]:
+# In[ ]:
 
 
 df_excel
 
 
-# In[16]:
+# In[ ]:
 
 
 df_excel.to_excel('output.xlsx', index=False)
