@@ -29,7 +29,8 @@ from datetime import datetime
 
 
 mounts_url = 'http://mounts-project.com/timeseries/'
-use_filter = True
+include_anomali = False
+filter_value = 0.1
 
 
 # Inisiasi variable untuk `output_directory` tempat hasil ekstrak data disimpan
@@ -137,6 +138,7 @@ def get_so2_values(graph_json):
     so2_values = {
         'Date time': graph_json['data'][2]['x'],
         'Value': graph_json['data'][2]['y'],
+        'Graph': graph_json['data'][2]['text'],
     }
     so2_df = pd.DataFrame.from_dict(so2_values)
     so2_df['Type'] = 'SO2'
@@ -150,6 +152,7 @@ def get_thermal_values(graph_json):
     thermal_values = {
         'Date time': graph_json['data'][0]['x'],
         'Value': graph_json['data'][0]['y'],
+        'Graph': graph_json['data'][0]['text'],
     }
     thermal_df = pd.DataFrame.from_dict(thermal_values)
     thermal_df['Type'] = 'Thermal'
@@ -206,6 +209,14 @@ for index, volcano in enumerate(volcanoes):
     # Get data JSON
     graph_json = get_json_from_javascript(response)
     
+    # save json
+    json_dir = os.path.join(os.getcwd(), 'json')
+    os.makedirs(json_dir, exist_ok = True)
+    json_file = os.path.join(json_dir, '{}.json'.format(volcano['code']))
+                             
+    with open(json_file, "w") as write_file:
+        json.dump(graph_json['data'], write_file, indent=2)
+    
     so2 = get_so2_values(graph_json)
     thermal = get_thermal_values(graph_json)
     
@@ -220,9 +231,8 @@ for index, volcano in enumerate(volcanoes):
     df['Code'] = volcano_code
     df.set_index('Date time', inplace=True)
     
-    filter_value = 0
-    if use_filter:
-        filter_value = 0.1
+    if include_anomali:
+        filter_value = 0
     
     filtered_df = df[df['Value'] > filter_value]
     dataframes[volcano_name] = filtered_df
