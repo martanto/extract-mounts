@@ -58,6 +58,10 @@ if (not os.path.exists(output_directory)):
 
 volcanoes = [
     {
+        "name" : "Lewotobi Laki-laki",
+        "code" : 264180,
+    },
+    {
         "name" : "Marapi",
         "code" : 261140,
     },
@@ -96,6 +100,10 @@ volcanoes = [
     {
         "name" : "Ijen",
         "code" : 263350,
+    },
+    {
+        "name" : "Slamet",
+        "code" : 263180
     }
 ]
 
