@@ -1,0 +1,1984 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<workbook original-version='18.1' source-build='2019.3.0 (20193.19.0821.2225)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Join Data (Krakatau - Data Mounts)' inline='true' name='federated.0h1zwne1ijkowi14geppe1uzlkdj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Krakatau' name='excel-direct.1afx7bk0ogyxpg1betse10y397wl'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/Projects/extract-mounts/output/Anak Krakatau - 262000.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='All Volcano' name='excel-direct.0z5kob014rdmc41593irz1mwef1o'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/Projects/extract-mounts/output/All Volcano.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0z5kob014rdmc41593irz1mwef1o' name='Join Data' table='[&apos;Join Data$&apos;]' type='table'>
+          <columns gridOrigin='A1:H5063:no:A1:H5063:0' header='yes' outcome='6'>
+            <column datatype='datetime' name='Date time' ordinal='0' />
+            <column datatype='real' name='Value' ordinal='1' />
+            <column datatype='string' name='Graph' ordinal='2' />
+            <column datatype='string' name='Type' ordinal='3' />
+            <column datatype='date' date-parse-format='yyyy-MM-dd' name='Date' ordinal='4' />
+            <column datatype='string' name='Time' ordinal='5' />
+            <column datatype='integer' name='Code' ordinal='6' />
+            <column datatype='string' name='Volcano Name' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H5063:no:A1:H5063:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date time</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date time]</local-name>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias>Date time</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Value]</local-name>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias>Value</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Graph</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Graph]</local-name>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias>Graph</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Time]</local-name>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias>Time</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Code]</local-name>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volcano Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Volcano Name]</local-name>
+            <parent-name>[Join Data]</parent-name>
+            <remote-alias>Volcano Name</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Code]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[Type]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;SO2&quot;' value='Massa SO2 (Ton)' />
+          <alias key='&quot;Thermal&quot;' value='Anomali Termal (N Pixel)' />
+        </aliases>
+      </column>
+      <column datatype='string' name='[Volcano Name]' role='dimension' type='nominal' />
+      <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Volcano Name]' derivation='None' name='[none:Volcano Name:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.540712' measure-ordering='alphabetic' measure-percentage='0.459288' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='shape' field='[none:Volcano Name:nk]' type='shape'>
+            <map to='circle'>
+              <bucket>&quot;Anak Krakatau&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Ibu&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Volcano Name:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Anak Krakatau&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Marapi&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Kerinci&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Ijen&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Ili Lewotolok&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Dukono&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ibu&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Raung&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Thermal&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SO2&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Anomali Termal dan Emisi Gas SO2 '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>Anomali Termal dan Emisi Gas SO2 &lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Volcano Name:nk]&gt;</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontsize='12'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Join Data (Krakatau - Data Mounts)' name='federated.0h1zwne1ijkowi14geppe1uzlkdj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0h1zwne1ijkowi14geppe1uzlkdj'>
+            <column datatype='datetime' name='[Date time]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;SO2&quot;' value='Massa SO2 (Ton)' />
+                <alias key='&quot;Thermal&quot;' value='Anomali Termal (N Pixel)' />
+              </aliases>
+            </column>
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Volcano Name]' role='dimension' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Volcano Name]' derivation='None' name='[none:Volcano Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date time]' derivation='Day-Trunc' name='[tdy:Date time:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date time]' derivation='Minute-Trunc' name='[tmi:Date time:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date time]' derivation='Year' name='[yr:Date time:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Thermal&quot;</bucket>
+              <bucket>&quot;SO2&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Volcano Name:nk]'>
+            <groupfilter function='member' level='[none:Volcano Name:nk]' member='&quot;Anak Krakatau&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]' included-values='in-range'>
+            <min>1.0</min>
+          </filter>
+          <filter class='categorical' column='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:Date time:ok]' member='2022' />
+              <groupfilter function='member' level='[yr:Date time:ok]' member='2023' />
+              <groupfilter function='member' level='[yr:Date time:ok]' member='2024' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]</column>
+            <column>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Volcano Name:nk]</column>
+            <column>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]' field-type='quantitative' range-type='independent' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]' scope='cols' value='' />
+            <encoding attr='space' class='0' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]' field-type='quantitative' major-origin='#2020-06-20 04:35:00#' major-spacing='1.0' major-units='days' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' value='56' />
+            <format attr='font-weight' data-class='subtotal' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' value='bold' />
+            <format attr='font-size' data-class='subtotal' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' value='14' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]' value='N' />
+            <format attr='text-orientation' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' value='-90' />
+            <format attr='color' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' value='bold' />
+            <format attr='text-orientation' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]' value='-90' />
+            <format attr='font-size' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' value='12' />
+            <format attr='text-format' field='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]' value='*yyyy-mm-dd' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_2' value='#dfedebe6' />
+            <format attr='fill-color' id='annotation_1' value='#dfedebe6' />
+            <format attr='fill-color' id='annotation_17' value='#00000000' />
+            <format attr='fill-color' id='annotation_39' value='#00000000' />
+            <format attr='fill-color' id='annotation_41' value='#00000000' />
+            <format attr='fill-color' id='annotation_11' value='#00000000' />
+            <format attr='fill-color' id='annotation_7' value='#00000000' />
+            <format attr='fill-color' id='annotation_50' value='#00000000' />
+            <format attr='fill-color' id='annotation_51' value='#00000000' />
+            <format attr='fill-color' id='annotation_53' value='#00000000' />
+            <format attr='fill-color' id='annotation_54' value='#00000000' />
+            <format attr='fill-color' id='annotation_59' value='#00000000' />
+            <format attr='fill-color' id='annotation_64' value='#00000000' />
+            <format attr='fill-color' id='annotation_71' value='#00000000' />
+            <format attr='fill-color' id='annotation_72' value='#dfedebe6' />
+            <format attr='fill-color' id='annotation_70' value='#00000000' />
+            <format attr='fill-color' id='annotation_74' value='#dfedebe6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4612706899642944' />
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk] * [federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk])</rows>
+        <cols>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</cols>
+        <show-full-range>
+          <column>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Date time]</column>
+        </show-full-range>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='408'>
+            <formatted-text>
+              <run fontcolor='#787878'>Type: </run>
+              <run bold='true'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Minute of Date time: </run>
+              <run bold='true'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tmi:Date time:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Year of Date time: </run>
+              <run bold='true'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Value: </run>
+              <run bold='true'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tmi:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tmi:Date time:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>16.0</value>
+                    <value>#2022-06-21 03:05:00#</value>
+                    <value>2022</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-330' y='-169' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='279'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>Anomali Termal: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Waktu: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Tahun: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>16.0</value>
+                    <value>#2022-06-21 00:00:00#</value>
+                    <value>2022</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-92' y='-131' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='266'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>SO2: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Waktu: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Tahun: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>223.19999999999999</value>
+                    <value>#2022-06-22 00:00:00#</value>
+                    <value>2022</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-75' y='-119' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='288'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>Anomali Termal: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Waktu: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Tahun: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>294.0</value>
+                    <value>#2022-04-24 00:00:00#</value>
+                    <value>2022</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-221' y='127' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='248'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>SO2: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Waktu: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Tahun: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>5193.8999999999996</value>
+                    <value>#2022-04-25 00:00:00#</value>
+                    <value>2022</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-285' y='8' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='260'>
+            <formatted-text>
+              <run fontcolor='#787878'>SO2: </run>
+              <run bold='true'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Waktu: </run>
+              <run bold='true'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Tahun: </run>
+              <run bold='true'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>13856.200000000001</value>
+                    <value>#2022-04-24 00:00:00#</value>
+                    <value>2022</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='213' y='51' />
+          </annotation>
+          <annotation class='point' id='6' mark-position='1' pullback='12' text-width='226'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>SO2: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Waktu: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878'>Tahun: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>9218.7999999999993</value>
+                    <value>#2022-04-23 00:00:00#</value>
+                    <value>2022</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-249' y='-46' />
+          </annotation>
+          <annotation class='point' id='7' mark-position='1' pullback='12' text-width='182'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>Anomali Termal: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>294.0</value>
+                    <value>#2022-04-24 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-49' y='66' />
+          </annotation>
+          <annotation class='point' id='11' mark-position='1' pullback='12' text-width='140'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='8'>SO2: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>9218.7999999999993</value>
+                    <value>#2022-04-23 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='113' y='-35' />
+          </annotation>
+          <annotation class='point' id='17' mark-position='1' pullback='12' text-width='153'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='8'>SO2: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>13856.200000000001</value>
+                    <value>#2022-04-24 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-213' y='20' />
+          </annotation>
+          <annotation class='point' id='39' mark-position='1' pullback='12' text-width='123'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>SO2: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>2957.8000000000002</value>
+                    <value>#2022-11-08 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-83' y='-57' />
+          </annotation>
+          <annotation class='point' id='41' mark-position='1' pullback='12' text-width='123'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='8'>SO2: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>5193.8999999999996</value>
+                    <value>#2022-04-25 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-89' y='-8' />
+          </annotation>
+          <annotation class='point' id='50' mark-position='1' pullback='12' text-width='198'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='8'>Anomali Termal: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>1055.0</value>
+                    <value>#2018-09-30 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='162' y='20' />
+          </annotation>
+          <annotation class='point' id='51' mark-position='1' pullback='12' text-width='155'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='8'>Anomali Termal: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>631.0</value>
+                    <value>#2018-07-12 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='131' y='13' />
+          </annotation>
+          <annotation class='point' id='53' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>SO2: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>10522.700000000001</value>
+                    <value>#2020-04-11 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-105' y='43' />
+          </annotation>
+          <annotation class='point' id='54' mark-position='1' pullback='12' text-width='158'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>Anomali Termal: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run fontalignment='0'>Æ&#10;</run>
+              <run fontalignment='0' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='0' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>86.0</value>
+                    <value>#2022-04-27 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='165' y='-74' />
+          </annotation>
+          <annotation class='point' id='59' mark-position='1' pullback='12' text-width='138'>
+            <formatted-text>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>SO2: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run fontalignment='2'>Æ&#10;</run>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='2'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>1018.5</value>
+                    <value>#2023-03-10 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-90' y='-55' />
+          </annotation>
+          <annotation class='point' id='64' mark-position='1' pullback='12' text-width='147'>
+            <formatted-text>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Anomali Termal: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run fontalignment='2'>Æ&#10;</run>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='2'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>2.0</value>
+                    <value>#2023-05-12 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-66' y='-69' />
+          </annotation>
+          <annotation class='point' id='70' mark-position='1' pullback='12' text-width='150'>
+            <formatted-text>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>SO2: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run fontalignment='2'>Æ&#10;</run>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='2'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>92.200000000000003</value>
+                    <value>#2023-08-24 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-88' y='-84' />
+          </annotation>
+          <annotation class='point' id='71' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Anomali Termal: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run fontalignment='2'>Æ&#10;</run>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='2'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>18.0</value>
+                    <value>#2023-09-11 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-100' y='-85' />
+          </annotation>
+          <annotation class='point' id='72' mark-position='1' pullback='12' text-width='156'>
+            <formatted-text>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Anomali Termal: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Pixel</run>
+              <run fontalignment='2'>Æ&#10;</run>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='2'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Thermal&quot;</value>
+                    <value>1.0</value>
+                    <value>#2023-09-16 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-44' y='-159' />
+          </annotation>
+          <annotation class='point' id='74' mark-position='1' pullback='12' text-width='132'>
+            <formatted-text>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>SO2: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[Value]&gt; Ton</run>
+              <run fontalignment='2'>Æ&#10;</run>
+              <run fontalignment='2' fontcolor='#787878' fontsize='8'>Waktu: </run>
+              <run bold='true' fontalignment='2' fontsize='8'>&lt;[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]&gt;</run>
+              <run fontalignment='2'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                        <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[sum:Value:qk]</field>
+                      <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[tdy:Date time:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;SO2&quot;</value>
+                    <value>39.899999999999999</value>
+                    <value>#2023-09-30 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-16' y='-158' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{124918D3-E9F3-4A41-9498-09FC2D1C203E}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='827' maxwidth='1169' minheight='827' minwidth='1169' preset-index='16' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98066' id='40' param='horz' type='layout-flow' w='98632' x='684' y='967'>
+            <zone h='98066' id='7' param='horz' type='layout-flow' w='98632' x='684' y='967'>
+              <zone h='98066' id='5' type='layout-basic' w='98632' x='684' y='967'>
+                <zone h='98066' id='3' name='Anomali Termal dan Emisi Gas SO2 ' w='98632' x='684' y='967'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='275' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98066' id='276' param='vert' type='layout-flow' w='98632' x='684' y='967'>
+                <zone fixed-size='280' h='98066' id='3' is-fixed='true' name='Anomali Termal dan Emisi Gas SO2 ' w='98632' x='684' y='967'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{7D8ACEE6-7D9E-4658-B5E6-EF7353EAC66C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Anomali Termal dan Emisi Gas SO2 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[yr:Date time:ok]' type='filter' />
+            <card param='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Volcano Name:nk]' type='filter' />
+            <card pane-specification-id='4' param='[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Date:qk]</field>
+            <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Type:nk]</field>
+            <field>[federated.0h1zwne1ijkowi14geppe1uzlkdj].[none:Volcano Name:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{90AE562E-B99A-478C-8FA2-888D078C83EF}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Anomali Termal dan Emisi Gas SO2 '>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{36B9D3CE-52DC-4919-B686-44FCC13701D5}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Anomali Termal dan Emisi Gas SO2 ' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAgAElEQVR4nOy9d5hcyXXY+7uxc5jpyQEZ2EVYYLE5klyRFLMoWhRNy7IkWtazJUsOnxw+
+      +XuBjs9+suVnyX629MlPtihRov0oiZRIiksutdyEDcAucpocemZ6OufbN9X74/b0AFhgBksA
+      Awxwf//MdPete8+tqlN1qurUKUkIIfDxuUeRb7cAPj63E3Xln2q1ykZ0Bs1mk1AodMuf4+Nz
+      PXQUIBaLbdhD4/H4hj3Lx2ctfBPI555GXf+S94pgfnqSSstBmE3CkSilcpWhLTvoT23+lt8V
+      guViHVmW6E2EkSTpdovkcwPcAgWAYChIzagTSfVhFubpHb2fVrOK40RwXRfbtm/FYzeEP39j
+      gt/7zilkWeLnPnmYZw9uud0i+dwAt6QHMAyTZKoHt1mhZ9t+CpkFBrfsQFFkZFlGVW+J3t1y
+      bMfle+9M0zQ9Bf7e29M899CO2yyVz41wC2qizMjW7e3/uwFIRHfd/MfcBhRZYtdwNxMLRQD2
+      jKZus0Q+N4q00QthlUplU84CCSGwLAtbSBw5PYeiyDy1fxRdU263aD43gK8A14EQgkajAUAk
+      ErnN0vjcTPxp0HUQQlCtVlEUxa/8dyGbczS6QbiuS7lcJhqNomna7RbH5xbgK8A1cByHarVK
+      IpFAlv2O8m7FV4CrYJomzWaTRCLhL3Td5fgKcAXNZhPbtonH437lvwfw+/ZLqNVqCCGIRqN+
+      5b9HuCU9QKNWQSgBbKOGEohgt5rEk13Id2idEkJQqVQIBoMEAoHbLY7PBnJLFKDZbFKoZKmX
+      SmzdMsBy2aJq2Az3pxBC4LrurXjsD0yj0SAUCqGq6h0nm8+t5Zb4AhXzebr7h1GEzcJiBiXU
+      dfMfcxMJh8O3WwSf28Qt6QF6+vpAkenp6SMQiWHUa8QSSWQJJEnypxV97hjWcYUQVIt5Tpw6
+      TTDewwP77yeg3ZjO3KgrhG3bZLNZenp6AG+xSlEUHMdBkiSEEDSbTVRVRdM0JiYm2LJlC7qu
+      d353XRdVVbFtm2azSTweZ3Z2llKpRLPZZOfOnYyPj/PYY4/xyiuv0NfXx+DgILFYDMuyyOfz
+      DA0NoSi+H9BmZ83anJkZ462z0+zbex9mrcg3/+zbfPwzn+B2DhOz2Szz8/M0Gg2EEDiOQ7PZ
+      RJIkgsEg1WoVSZLo7u5m69atpFIplpaWqNVq6LqOqqo0m000TSOTybBjxw7C4XCnMrdaLZ5/
+      /nmKxSL79u1jaWkJVVXJZDI0Gg3m5+cZHh5mYGDAV4C7gDUVoKu3l0b+TV57ZRlFjfFjn/80
+      +kZJdg1isRgHDhzANE0URSGfz5NKpdB1T7JQKISu64RCISRJIhqNEgwGCYfDJBIJwFvlbbVa
+      BINBkskkrutSqVQIhULIsszDDz+MYRjEYjGeffZZuru7mZ+fR9M0BgcH/dXhu4h1vUFzsxf4
+      /a+8yBMffIzDDx2+YQXYjN6gPncv6xr0zWodo17klTeOc/ihwxsh05rkcjlqtVrHM1NRFGRZ
+      JpPJ0N/fTzgcxnEclpeXmZ+fp9Vq0dXVRbFYZGBggFwux1NPPcWLL77I9u3bOX36NJ/+9Ke5
+      cOECtVqNer3O/v37SaX8zS73AusqQKirl5/9+79IaX6WOyWEnGmaGIaBpmnUajUcx2FgYIBm
+      s0mtVmN4eBjDMOjq6iKfz5PNZgkEAqiqSldXF2NjY4RCIY4dO0ahUODs2bMYhkE8Huf48eP0
+      9fX5CnCPsL4CBGX+j//tHzKw9xl+ef++jZBpTZLJZKeVNwyDnp4eNE3DNE1s20aWZQzDIBAI
+      0Gg0GB4eJhqNMjMzgyRJSJLE/fffz+TkJA8//DCtVot4PM7FixdRFIWf+Imf8O37e4g1xwC2
+      2eDYq0couirVpWU+8Vd/nBtdMvLHAD53Euv2AGoggGZJPPj4I7d1+tPH51awpgKousbU1DyO
+      UHj6/U9zvbPeywtzuFoEp1km2t1HYWmBwa07CWq+aeFzZ7FODyCwm3XylRr/4w+/xuevcx0g
+      EouTLxSRtCC56bMEBvaynFlieLB/0wfG8rm7uAVRIQQnjr1F18Ao1cIy4WiUUmk1NKI/BvC5
+      k1hHARy+981vsFxpYFsqP/7XPnvD4wBfAXzuJNYxymUefeopEpEg3X29/v5Jn7uOdRTA5rd/
+      /ddZKtVp1hs4GyOTj8+GsaYJlJkdYyrX4qED92GbDV575S2e/eiHbsgM8k0gnzuJdfcDzFw8
+      w+tvn0INxnjugx+kO3Zjxxv5CuBzJ7GmAgjhYlmrU5aarnOj+9p9Bbh+HMfBNM01z1RrtVqd
+      fRHLy8uMjIxcM4pdq9UiEAiwuLiIrutUKhUGBwdJp9PEYjF0XSeZTAJgGAayLHfczO9W1hzX
+      WkaFb/zp81iAokb51F/6+G3fD3AvUSgUMAyjU3FXNvUYhkE0GmVxcZFUKkUsFqO/v59gMMj0
+      9DS2bXe2nq74OmWzWfr7++np6eHEiRM0m00sy+JDH/oQJ0+eJBAI0NvbS7PZpFgsoqoqjz76
+      KH19fbc7G24payqAHkry4J5RfucPvoWa6uETGyWVD+BFq2g2m/T29mKaJkIIdF0nEolgWRah
+      UAhFURBCIEkSuq6j6zrhcJhwOIzrurRaLYrFIpFIpNMzRCIRIpEIhmHQaDTYsmULBw4c4O23
+      38Y0TSKRCN3d3Zv2IJP3wroLYemLpykaLV546TR/6xd/2l8HuMWsmDP3QuW7E1g3l2UZ3nz7
+      NL2pxA3b/z5rs7I1c2WzT71exzAMQqEQ4XCYZrNJMBik2WxeFsplcnISgFKpxODgIIuLi3R3
+      d+M4Dtu3b+fo0aMcOnSIsbExDhw4wNmzZwmFQiwuLrJ///7OVtF7kXUVwDYaBKJJkpHYdSvA
+      QnqKWHKYpdkxkn0DZBfSDG3fQzIavEFx715s26ZarRKPxzub7UulEsVikWQyyenTp9E0jWQy
+      SalUor+/H03TiEajKIrC+Pg4sViMqakpms0mPT09ZDIZstksqqry9a9//bIBtWmaSJJ0zx9a
+      vv6WyEaL0e3b6QmHrjuQaFd3EsOwsB2XZmGR5Oj9VEtZYqEB3xnuKliW1RnYCiE6+RMIBBgY
+      GKDVatHd3Y0sy50IFpZldcYB09PTDA8Ps7i42AkAMDU1xeDgIKOjo7zyyis8+eSTZDIZRkdH
+      efHFF9m7dy9CCGRZvqfLY90xwPTptzg2mSWV6OLp9z/J9RwTMTt5nhYRVNFED8co53MMbdtD
+      MhrwxwBXsBKN2g/Ie3tYtwcQdpMTpy/w3JOPX/dNt+y4/7LPw4OD712yuxwhBPV6HVmWicVi
+      t1uce5Z1FWBg5wEO7cyS7Ilf94YYn7VZOXcsEAj40ahvM+ua9TOnT9BqKGQWl2luhER3OUII
+      yuUyoVDIr/x3AOsogEtqyy5UrY6t6PhnJN4YjuNQKpWIx+P+oXt3COsogMkf/8Efg67RKlcw
+      N0amuxLTNKlWqySTST/syh3EOmMAiYOPPcPhx/cjSdJ1zQD5vJuVmZ4VRzOfO4d13aGF4KZO
+      z91L06CXzvSsBOv1ubNYswdo1fK89P2jZIq5OyY69GbBn+nZHKypAJKiUqtX0HUdRfUNoOvl
+      Up8ef7B7Z7PmaEwLxvngB59F2DaOf3jcdeE4DuVymVgs5lf+TcDaPYAkM3vmLJFQnJorXfem
+      +IX0FLHEIJn0FJFkiuLy0j3hDGdZFo1Gg2Qy6dv7m4R1V4J3HDqIPL/I0RMT123/d3UnaVYN
+      QskURnaa5OiDd70zXKvVwrZtIpEIjuPHz9gsrKsA6QvnOJ9vMTrUjwvX5Q6RXcxgEgWrSqRv
+      G8X5Cwxt29M5zOJu2OzhugLHdVEVLxy7JEnE43G/5d9krL8hRoHFdBojmrzuAzKudIYbvMv2
+      lRarBr/59aMsFWr8pWf38uyhLX7F36SsuyQpKQqK5K9cXsq33xznyJl5phZL/NdvvkOjdfeZ
+      dPcK69bs3pGtBCQbJRTyV4Lb6NqqIagqMrLf+G9a1jWBFicmOPTsh5l/+y0M4N7eQOfx0cd2
+      ka80WcxV+fQz9xHUN/+Y5l5l3R1hwrV549WXiQ3sYN/urX5gLJ+7inVNoItvvMTZuWXOnzqL
+      tRES+fhsIOv23ZHuJPbZOVpS4I45JvVORQjB94/P8BfvTLN/ey+fefZ+NNXfR3cns+4RSTXD
+      ISgZLGc3RqDNzFKhxn/+2lEM0+bExBJb+xM8vm/kdovlswbrKIDN0SNvYatw//4HfU/QdbAd
+      F9f1+kkhwLJvn/+UYdocOT0HEjy1f5SAP1C/KuvkisZP/s2fp14r886x01jgK8EaDPfE+Ssf
+      PMD3T0xz/5ZeHrlv6JY/c6lQ452xJbYPJrlvNEXLdHj93DxHTs/x+tk0AJMLJf76xx/0F+uu
+      wi04JK+NcDl94gR9gwOkFzL3zCF5Qghsx3ORuNUVrtpo8Y//y3dJ56oEdZUvfuEDfP/4NN96
+      Y/yy6+7f2sP/+XMfRPYXLN7FLesXBYJAMEAxu0Dv6B5azSqOE7lrneEuRYJb6hBXNyzevrhI
+      tWmyVKgBnskzNpfjwmxuVQ4JgrrKhx7ajus6+B7t7+YWGoYSwWCASNco5VyGwS07UBT5rnGG
+      W2EjWnzTsslXmqTiYVRF5j/9yRHeOJtGliTCQQ3DtOnrivDo3hEkWSb97RPIssRPfvggj+4d
+      oi8Z8c2fa3DrTKBrcDeZQI7r8ocvnOaNc2ke2j3Ij71/L4Zp0x0LoSgyjuNSqDaJhnRCgR/M
+      kaRumPyrL73Cxfk8942m+Hs//gS//J+ep1QzAPjAg1v50Wf30pMIEQsHcF3BUqGGLEv0d/kV
+      fz3unqb4NjCRLvI/XzyLEDC7VOblk7PUmibPHtzCz37iML/9Z+/wyqlZBlNR/slPPktf13uP
+      rHR+Ns/pqWUATk0u89t/9jbNlrckGQ5qvP/BbWwfXI02IcsSQz2Xh1p0HJcXj08ztVTiuQe3
+      sWOoC1cISjWDaEgnoP3g1UAIgSsEsiRtSmXzFeA6cIVgerFEtdFi79bejjOc5wgn4QiBAHLl
+      BgAvHJvi3EyOhXwV1xVMLZZ4/ew8P/L0fe/52QPdEcIBjUbLQpEljpyZ7/z2c598iMO7B9a9
+      x+tn5/mNP3oTIeCNs2l+9W99mC89f5JXT80y0hfnV/7qM6QS4cvSCCFotCyEC5GQdtXKXa4Z
+      /NdvvkOmUOcvve9+Hts7vOmUQPniF7/4xY184Mp5V5uJV07N8S/++0u88PYUs8tlHrlvCE1V
+      SESDJCIBLNtl//Y+ZjNlhAABVBotVoxLRZb45FN7GEy99yC4sZDOAzv66euK8P7D2zh2YRFX
+      CCQJPvbE7qveUwhBOldleqlEMhbk+NgSx8czALQsh/lshVdOzWI5LoVKk4FUlN0jqcvu8c7Y
+      El/8ne/zZ69dJBUPsbU/8a7K/ccvn+cbR8bIlRucmc7y0cd3oSqby3Xe7wGug6MXFrAcbwrl
+      jbNpvvK9M/zMxx5EliQ+9sRuPvbEblwheHL/CC+fnOWlEzOANxu0ZzTFZz+wjwevo6VewXFd
+      mi2bSNBree/bkuK+LSmEEJimzSunZjm8e5AD26++0ejkRIZ/+aWXaVkOT+wb4Wc/cZhvvD5G
+      ttTAdlzePJe+7PrjY0v88KM7L6u8X3v1AoWKFw32a69c4KE9gwR0FV1VsGyHZsvGtFZnum6k
+      3W+ZNgIIaMqG9yC+AlwHj943xMsnZnDaq7zpbOVd18iSxGN7h3lw1wCxkM433xhDCJhYKKCr
+      CvJ1FmytYfLvvvIaF+byPLl/hJ//0Uc7FVOSJD76+C4++viuzuercfTCIq125Tw5sURAV9g2
+      kCRbalzj+gXeOJvmzNQy05kST+0fZSgV4/jYEgDLpTq/8O+/SSys89n37eOrL51juVhHUSQi
+      QY0t/Qk+8OA2phaL7Bzqvmy/xKVML5b48ndPoWsKn//gAXqTYc7P5PiNP3oTxxX8L596mMfu
+      H8KwHMIBdUOUwTeBroORvjjxSICxuQLRsM5PfeQQA93Rq16rKDK9yQjfOTqJ6wpcAfdtSTHc
+      E+e7x6aYWiwy3Bu/pqnw+tl5/uil81i2y0ymzKN7h+mOr+7CkNqDzfUqx5Ez8ziu4PDuAX7o
+      4e0ko0FOTWTQVIWDO/sJaArVtpkW1FVOTmQ4OblMttTg+PgSP/WRg2ztT7JnNMXkQpFKvUW1
+      YXLs4iKlmoHjetO/lu0y0B3l+8en+fM3x5laLHFoV/+79kg4rsu/+8oR3hlbYjZT5oVjk/zF
+      29Mcu7hIplin2bKZyZQ4cmae3//uKYrVJg/s6EO5RhxVIQTfPTbF7377BOWawa6R7h9ooc/v
+      Aa4DWZL42OO7eOaBLSiyN/e+FkM9Md53aCuvnppjpDfOo/cP8zvfeofn3/IOs5tbrlzTNSEV
+      D6EqMrbjEgpoxMPvvbE4vHuAX/35D5MvN9i3rRfHFezb2stv/N2P4biCWFjHcQVvnU9zbjrH
+      ntEUv/FHb3bSCyHQNYUfffZ+bMfl1GSGcr0FwEB3lPkresCVWSqAt84v8Cu/+QKP7R1mPlvh
+      w4/s5LG9Qwjh+Uqt0LIcMsX6ZT3jfLbK3LJ376+/epG3Ly4x0hvniX3DlOstHtw9wLaBZCcP
+      f/PrR7Fsl5PjGbYPJjm06/rNzBX8HuA6kSTJs4Gvw06VZYlH7hvihx7ezscf30UkqPE/Xzzb
+      sanTuSrpXJVtA0miocu9q3oSYVLxEKensvQkwhzc2f+uGZrrkTUZDTKYijI+X+BffullvvX6
+      GFsHkmwdSLQP0ZYY7UtweM8gw70xSlWDueUKkaDGjzx9P+87tBW5fd2B7X1oqsyT+73xRHcs
+      SEBTWSrUcIVg20CShmF1TMRqw+T8bI6FXJUT4xk+cHgb4aBGVyzEKydnL3Orf/qBUZ5+YAuZ
+      Yo26cfmOk0qjxXy2wutn0xwfX+LI6Tlc4c2+TS+VeP1MGoE36fDMA1veNf17JcVqk+VinXgk
+      0CnDW94DCCEol0rEk1331N5ZRZHpaVdcIQQffWwXC7l3aBgWtabJC8emqDct/vFfffqyVlCW
+      JfKVJo2WxUymzK9/9Q1+7Rc/gv4D7iv4Hy+eZTZTBuAr3zvDoZ39KMrlBaHIMj/7ycP86LP3
+      EwpoRK+Y9hxIRfmZjz3Y+fzpZ+7nU08JxubzFKpNDu7oZ3qpxL/7yhHylcuPUbEcB8tx24P5
+      HlKJENlSAwn4oYe389MfPUQiEmR2uXzNMcoK5XqL3/32CZR2RRIIBrqjPHLfEA/sXDvyyORC
+      kX/2379PvWnxMx87xMef2I0kSbdeAZxmgUy+StWwGe5P4boulmV1TjcHrvq/JEm4becVWZYR
+      QnRONVz5fzOlef+hUfZvTfEfvvom52bzAFQbBrZlI0mX50GlbnTyr2FYtFomMtpVn3kt2Vb+
+      j4VWizgW0rBtG9e9epquqI4kSViWdV3P2T4QZ8eg16PsHk7yT7/wPo5dWOTLL5yhZTnIksSn
+      ntxNMqxhWRZBTeLv/tijvHBskm0DXfzwozs8c8+2+cwze8gWa1i2w/sObeX8bI6LcwXCQe+9
+      l0vNTg+z8hfgJz98gCf2DQOic/Tr1d7ttdOzFKtevn7v7Wk++NA2ZGmDxgBX87ZYEe7SzL3S
+      tFjr852e5mq/9yTD/PRHD/Hb3ziOEIKf+NABZFm6rLAAPvHkbuazVQrVJp99/97OgPJq97wy
+      D6+87qc+cohENIzjuvzIU3uQ5fXT/CDPkSSJge4on3xqDwOpOEfOzPPAjj6ePTjS6eEkSeL+
+      LT3cv6Wnc78Vtg0k+ec/+xzQXjd5cjeWI1BkCctxWczX+K0/fZupxRLgjSfi4QDbB5PXVY/u
+      G011xlZ7t/Z0epFb7gskhKBSLhNLJJGlu8sX6AfBc57zLNe1HOgcx8VxBZp6692qNwvNlkWm
+      WMd1BRfn8uzd2sOWqyzQXQ0hBGemsmRLdZ46sLpByHeG87mn2Vzr1j4+NxlfAXzuaTqD4Gq1
+      etXB6s2m0Vh7qsvHZyPpKEAs9t49FX9Q/DGAz52CbwL53NPcsAII16FS9TZmVyqeH0e1XKDW
+      NCnms7Qsm+VMBucuCSsnXAcndxEnP4EQ/i7zzc4NL4SZrRaFYgnZMbg4tcgjh/eTzZVw3Syy
+      qpPPzCFFBjAWMowM9iKE2NRHCNlv/zfMI/8RkAl84FdQ9n/mdovkcwPcsAJIkqBcLGA1dRr1
+      CvVGC9tqgaJiGU00RadZrxLs7umsKMrXcHG90xGOhX3hW+B4rgL2hW+gPfBjt1kqnxvhhhVA
+      VjS2b99GJBpjxy6XcrnMtu3bkRQN1zZR9QCmYRAMhVlZsNuMK5tCCIQko4w+hpu9ABIoW57Y
+      lO/is8qmWAnOZDKEQiFKpRKpVIpcLsfg4CCapjExMUFfXx/j4+McOnSImZkZNE1jcXGRHTt2
+      kMlk2LdvH+fPn6enp4disYhhGBw8ePC6nu26Ls1mE8dxCIfDKNg4M6+BrKJseRJJ8c/N2cxs
+      ig0xjUaDer1OKpWiWCyi6zr1ep1EIkGpVKK3t5fZ2Vn27dvH+Pg4iqLQaDRYXl4mHA5z331e
+      NIZcLkcymcS2bZ5//nlM08R1XT75yU++yyxzXZd6vY4QgnA4fEkwLxV15w9tcA743Co2hQIo
+      ioKu6ywvLxOLxSgWiwwMDCCEoFarMTMzQ1dXFxMTE3R3dyNJEsFgkHg8TrFYpFAoMDMzw8GD
+      BwmFQp3WPJlMkkgkLnuW67rUajWEEEQikbsqip3Pu9kUJtD1cqO7zer1Oo7jEIlEUBT/YIt7
+      gTu6eTNNk0ajgW3b6LpOKBTCMAxUVe204it+4CdOnCAYDLK4uMj27dsplUooikIsFqOrq4vT
+      p0/zwAMPMDk5yQMPPMDRo0fZuXMnY2NjPPXUUwCEw2F/UHuPcUcrgKZpzMzMEA6H0XWdEydO
+      EIvFOnZ8JBJBlmV6e3uRJImpqSkGBwcplUo4joOqqtTrdcbGxkilUnzzm98EIJlMIoTg7Nmz
+      nD59mkceeQRd1/3Kfw9yRysAwMDAALIsEwgEEELQ3d2Nbds0m00ajQZdXV0du33v3r2k02kS
+      iQS6rlMqldi2bRtbt27l7NmzfO5znyOTydDd3c3c3BwHDx5k9+7d6Lp/7Me9yg2PAVqNGrly
+      g4gOy8UGu3ZtY2luGjkYp1XJE0n1UVicZ2jHfUQDqr8hxueO4oZ7AD0UQS5Vica7qdRagIOD
+      hlnJo0USVOcvEB05RDGbITQ4cE8ckOGzebhhBTDqZebTaSqVIqghioUKZrOMFIhRzWcIJwbI
+      zZxnaOsuFEW56w7I8Nnc3PRpUMMwCAaD1/zdN4F87iRuelO8VuW/l2k0GuTzeaLRKIZhoGka
+      Qgh6e3u5ePEi8XicWCzGuXPnGB0dxXVdcrkc/f396LrO5OQke/fu5a233uLgwYMkk8n1H+qz
+      Lr4tskGYpolhGB2Xi0AgQKPRoNlskk6nmZiY4LnnnqNWq6EoCgsLC8zOzmKaZsfn6dChQ0iS
+      xPT0NPl8Hsuy6Onp4ZFHHrnNb7d58RVgg1hxA1cUBcMwKBQKnVXrkZERDMPgzJkzSJJEqVSi
+      UqnQ09NDJBJBCEFfXx+SJNHf34+qqti2TSqVWuepPutxV7lC3Gl4B1qY1+WeYds2sixv2r0S
+      mxW/B7hFOI5DtVolEvEOxiuVSrRarY5LhyRJtFotTNMkFouhaV4MzEwmw8zMDLquE4lEyOVy
+      pFIp8vk8Tz31FEePHqW3t5fFxUUeeughFhYWKJVKXkToZJJt27bd3hffZPgKcAtY8WGKx+OX
+      teiVSgXDMAiFQtTrdVqtFl1dXTQaDVRVJZlMoqoqQgiazSb1eh2AUCiEEILp6WkMw+D48ePM
+      zs6i6zrxeBxFUVBVlUKh4CvAe8RXgJvISsV1HIdE4vKYlbFYDMdxcF0XIUSn1V8xk1qtlhdH
+      tVIhFAoRDAbRdZ10Ok25XCYcDrNt2zaazSZ79uzh2WefJR6Pc+HCBVRVxTRNhoeHb+Pbb05u
+      gitElWypQSwgsVw22LVjlIXZqbYrRIFIdx+FJc8VIhbU7toxgBCCarWKpmmEQqH1E/jcEazb
+      A1ymH5L0rtMAA+EYSqlGpWmT0MAULkIKYlaLaLEktYWLxEYepJRbJnyXukKstNwrG2jutve7
+      m1lTAYpLM3z7xdewbBtZkglGe/j0pz9yWaJmrUR6YYHe3hTZhoVSLGEanitELb9MuGuI3Mw5
+      hrftvitdIUzTpF6vd3ai+Wwu1jSBWq0W2E3eOnYSIQd59JGDqMHgmlqz3q6szW4CCSHAqoMa
+      xHYEhmEQjUb9yr9JWbMpDgQCjJ16i3D/FnojOnowuG4ouc14AN71IoSL+cZvYp34CnLXVoIf
+      /1VisbXPpvK5s1l31SWW6ua1b3+d737vNe51y1bUljGP/XdEI4eTPoZ97k9vt0g+N8i6CmA2
+      GnQNjuBarY2Q545G0kJIwRXzTUKK9t9WeXxunHVHo8FwGOE4qIGAH0o6ECf08X+LdeaPkXt2
+      o+75yO2WyOcGWWcdoMUbL5/hwEN7kCSFUDj0rmnQ98pmHwT73F2s0wMITr51hHR2GlmJ8PFP
+      fwR/+7jP3cSaPUA2PclyVWHffVsRwmHszDm2PXCAG5nn8XsAnzuJNXuAVP8I5859j9978/vI
+      qs6Bhx6/ZuVPz05SqJjsO3AfUxfOIQUimPUy4ViCUqHI0NZd9HZFb8Er+Pj84KypALKq88xz
+      H+YZSQYE0hq+6q7j4tgWQrgEQgkcq0Gsux8zP0PP1gcw6gWceOiudIXw2bysMwZw+Orv/Q4V
+      tYunt25h8JlHSVzjymgsRsvVWF5aRpVt9GQPrUqe5OheCkvTDG3bc1e6Qvhsbtatib2ju3mk
+      L8h//s9f45888+g1r+vq6aer54ovU10AdCf23pCQPj63inWm9hUO7tvOm6en+C4qA2sAACAA
+      SURBVBv/6G/jxyHwudtYRwFsXnrpKJ/41Kc4d+Q1jI2Rycdnw1jHBJJRqPO1P/lj6paKfxiQ
+      z93GOgogsf/Rp2kVFzk6XfFdIXzuOtZRAJuLJy9QbFbY0zNAA4hsiFg+PhvDOgqgsXNnPyL6
+      IBHNJbwxMvn4bBjrToPu2neI7PIyDhoCbtgZzufOwLZtWq1WJx4RgCzLaJoXuCAYDKIoCrVa
+      DU3TME0Ty7KIxWKdk3fC4TCFQoHu7u5Ne8jIugpw8c1X+PoLR9G7u/mbP/8FrhX6NpOepWbL
+      7Nw6zNj5s0h6BLNRIRyNUSqWGdq6k77u2E0VfmxsjGg02tmQvhKFra+vjz/8wz/kM5/5DJVK
+      hWw2y/LyMolEgvn5eT784Q9z6tQpZFlmy5YtvPrqqxw+fJhoNEo6neaBBx7YtAV6vWQymU48
+      Itd1SSQS1Ot1+vv7SafTVCoVwuEwY2NjKIrC6OgojuPQ1dVFrVbjzJkzfPazn+XIkSPs2bMH
+      x3GoVCqMjIxsqthE6ypAaniEz3yuj+9+/wRrnZtYqVZomoKWM0ggnMA1mwRTfZj5WXq37Mdo
+      lHES4ZvqChGJRCgWi4RCISzL6hSkZVkMDAwwOTnJ6OhoJ1xJLpcjGAxSLpcJhULMzMxw+PBh
+      BgYGSKfTneuy2Sz9/Xf3Zhdd18nlcoTDYRzHYXFxsXP81LFjx3j00Uc75y0/9NBDzM/PE41G
+      6evrY3FxsXM+W19fH9VqlUajQSKRIJ/PMzIycrtf77pZNy7Q9Kl3qAmL7758kV/42z95TXfo
+      RrXEYq5CKKihCAs5mKBVyRNN9ZFfSjO0dRchXbmp3qDlchlN07Asi2AwSKlUIhQKEYlEmJ+f
+      73TZKydLJpNJcrkc3d3dGIZBOBwmHA53ojSvhHYPBAKdoFX36mb3lUbibu8J11WAzOQZ/vj7
+      p3j84B4OPPzQDa8F3KgCCCE6FVOSpM7/V1bWlShs4B20bds2iqLgum4nds/KcasrnyVJwrZt
+      NE1DlmVarVZHeUKhELIse8+vLeNmzyP370eOXOn/sTkwDKPzrivK7rouruteFtigUChQLpcB
+      OocLDg4OUiwW2blzJwsLCwwMDLC0tMTw8DCZTAZJkigUCmzZsoVw+M6eOlnXBGoZDu9/bDff
+      eekc+x9+aCNkWpOFhQXy+Ty9vb1e2BYgHo8zPT3Nzp07O852uVyOd955B0mSiMfjlEoldu3a
+      xfj4OD/8wz/Md77zHQYGBjh16hRf+MIXmJycZHp6mtOnT/MzP/MzdHd3EwgECAQCWJZFvV7H
+      dV2UVhG+/jcQ1SWkxCiRv/JlpFDXbc6V9065XO6cpey6LpZldYKgJRIJIpEIwWAQIQQTExPo
+      us7MzAyKohAKhZiamkJRFNLpNN3d3UxMTGDbNtPT0wAsLi5i2zYHDhy4jW+5PuuubWmaxPeO
+      XODpR++/I2aADMMgkUhgGAaTk5MUCoVOFOalpSWWl5cBOH/+PN3d3biuS7VapVQqMT8/TywW
+      Y35+HiEE+XweTdO4ePEi77zzDoODgzz22GOk0+nLnqlpGrFYjEQiQaA8jqguASDKczjZCxue
+      BzeDWCxGJBJBURQ0TSMSiRCJREgmkziOQy6XA+DChQv09PTgui6aplEul5mbm6Orq4utW7fS
+      bDaZn5+nVCrR29tLJBIhEAiQSqU2RYjI9U2gqdP87h98Cy3Zwy/8whdueEvkzTCBNoJr2f5u
+      dYnGV/4aorqIlNxC5PNfRgr5boKblXVNoGq+xrPve5xXjo7hbIRE63C7B6VStJ/w57/cGQP4
+      lX9zs44CuIhQBE3SePqJB/0N8XgKKEV7kaO9t1uUDWel973djdDNZN0dYS9951tkTZnd9x9i
+      Q89S8rnjWImCrSgK4XAYRVlrZWhzsM4gWOWTP/6XeXDfLpbm0+uaQI1Gw/tbr9JsWdQqZUzb
+      oVQs4vras+mRZZlkMtlZOymVShiGsWHjsveCbduUy2VarRb1er2z1gPeDJgQXmDjdb1Bv/rl
+      LxPqG2FgoH/NWaBGJc/p8Xkee+gBFhYW272FhGRP42gJqobNcH+qM9/ss3mRJKlz9plhGJ3p
+      1HA4fMcc8pfNZimXywQCgY4LR6VSoa+vjzfeeIPnnnuOt956a31v0F/4h79yXQ/MZLIYjRrN
+      lsWK15xAILFxMzc+G08wGCQYDOK6Ls1mE9u2CQaDtz1K+Mr6ja7rOI5DNpslHo93psXHx8dR
+      FOXmHpNqWRblcplIKIikBbFbdQKhGI1ahVgiiSz5gbHudlZMC8uykGWZUCh0R44VCoUCXV1d
+      /jnBPrcOx3FoNBq4rksoFELTtFs6g9RsNjutvq7rHXPbcZyOnxdALpfrjAP8AD0+twxFUYjF
+      Yp1eodlsXjZWEK6Ns/AOCIEydBhJuTFPs0ql0hmPOI6DZVmd3+LxOJFIpLM6PTMz4ymk3wP4
+      bCS2bdNoNNB1Henk72G+9usgBPoTfwv9iV+4oR5iZWbKNE1gdb1CVVUsy8KyLIaHhzlx4gSR
+      SMQ7YNxXAJ/bgRAuzf/x014PAMj9Bwh//veQ5I01Su6MOSufexAJddeHQJJBklF3fRCkjR8s
+      +z2Az21DCBd3+RwIF7lvH5K8MQpw6d4RfxDsc9uQJBmlf/+GPlMIQbVaRQjhbXy6WTe2Wk2y
+      +SIAtUqJhmFSLuZpWQ65bNZ3hfC5I1jZIBWPx1FV9eb1AC3TopjN0pVKsLycxxXLSIqKWJyF
+      UC8Na5mRgR6EEDjOneBY7XOvoyjKzVOASiGLFo5it0wcxwJZwTZbqLJKq9UkGAp27K67yZ3W
+      Z3Nz0wbBRrOBYdrYtkUsEkZSdBzLQAuEaDUbhCNRJN8VwucOw58F8rmn8dcBfO5p/GnQm4AQ
+      AmfudezxF1BGHkPd/SEkyWtbhG0gGkWkSM/avi5CIIQLktRJ+65LXBsn/Ta4NsrwI0iqfsUt
+      XBAukqSAP866LnwFuAmISprmn/59MGtYp79KOPJfUYYOI5pFmn/693Cy51C3PkPwY/8aSb2K
+      n7wQ2HNvYB75f5BCSQLv/8fIieF3XWa9/bu0Xvm/Pd+ZR76A/szf70wouLUMrRf/DW51CaV3
+      D+p9H0MZeQyEC5J8R008CMfCWTgOkowydGjD3R8uZVMpgLBbOIvHkYIJ5J4912wpb8mzhWBl
+      p8+VlUk0i2B520FxLIy/+JcEf+h/xa0s4Cy8DYA98QJO+hjKwEHQI140O9fBHvs2buYc1tjz
+      iEo7HpEeJfDULyFF+y5bHbWnXvYqNGDPvIb+1C9Bu1cx3/4S9tjzALhLJ7EufIvAU38H68I3
+      kcMp9Cd/Ebln9y1RBCEEOC2E2UAKJdcsFyEE5pu/hfn6fwFJQn/i59Ef/gKogavKtla+rymT
+      YyFaFaRgcs0VZuWLX/ziF6/7rjeBVqv1A+0WEsLF+O4/xfz+/4V15k+Qu7ejpHbdmDBCdDb6
+      r5W5QrjYZ/6E1ov/Gjc3hjL8MJKirUZJCHfhVhdxc+OAQDTy2LNvIMkKbu7iaqWd+AusU/8T
+      JbUTKbkFe+IFjG/+I88hrFXtPM/NXcQ6+Qe4hUkkLYyTG0PUMtjTLyPqWZBktIOfQxl9DDd7
+      HuudL+PMv4WoLa8K7Vg4c28iKgu4xSnsmVdR+veBcHCWzyEFk+CYIBxYaYGFi5s5g6hlkcI9
+      YDdx0scQVtNrpRUdzLr3PrLSyTNRnqP5//0NzDd/CywDZfTR1fy8Mo+FQ+uVf4+oLwMCJ30M
+      e+K7qFuegGDysrIQjon5+n/BPPIfwW55YWiuQwmEUab5p3+X1iu/hpsfQ93+gWsqwaaZBRJm
+      jfp/+5RXAQB1748Q+ui/uiFZnNw45qv/AWSFwLO/jJwcffdzHcszPV79da+yAIEP/Araoc9j
+      Hf99z+4fOgyAeeIPvApyKarnfy4pGqJVAUAZehC5by/WuW9A+7v1kQABkkLww/8MOTkCSDS/
+      8Q/alekKZBXcK6NwS57zmXCQYoNgt0CWkRNbQDi4jTyisgCA/tBPYU+9hFuY9NJoYZTe+3AL
+      U6BH0A993mtdE0M4Uy9jHv1/vUfoEUIf/deIVhW3NIscH8Ia+w5SMIG64/24hUnsib/AzZ6/
+      XNyBB5CUAMrWJ9Ef+etIioY9+SLNr/2S996yRvhz/w1l8NC6OWVd/HOMb/yD9ivLhP/yly5L
+      J4SLm59ANPK33gQSrsP4xQsMbb+PSOAGnJ2u0FNl+PANy9X6/r/BmT3ifSFJBD/xa5e1MEII
+      Wi/9W6zjv39ZWnvmVZTBg7Re+rcgXJz0sWs/yPYiEQjH7HzlluY8G/i9Sdz+42Ae+x3c/ESn
+      Ml+Vd1X+9j3a14vqYudbp55715XmO18Ct31v4YJZW33PZoHWS7/avlJCujRAsFmn+fVfuqpI
+      9vk/u9bL4S6d8mRZOIbSvx912zM4S6fpvLdrYR7/MqHrUAA5NuT1Vo7pmZuRy2M42Wf+BON7
+      /xwc69YrgFNbJtK/g0J2ieDgQGdDBLAabfmSaM+XnlZy6f/O0jlEI9+5r+WA02xeM83KrqBr
+      Pse2cO3VSmm1DGSzheOs3ktYTeyJF9/1TiI+itGsv0sp10IeeQy79wBICqrkIo7+1nWnvezZ
+      wS7cWoZLK/MtYeAwLL7dMd/WkAhh1lYr3HtE7P44UqQfTn7JU1oBLaOJ2WggKkuXXeteUnfW
+      Kl+SuxAf/FewcAxl53MYagIajU4acfF5cLzdYrdcAeRQnOyZCwxt3en5XqjqDxQyWwzcR6Nr
+      m2cXh7oJjj6EciPBV0UA5/3/kNbLv+aZQO//ZRQ9cNn0oQjotLY+gXX6q4CEMngQZedz6Ac/
+      D1oQ84mfx578CxACtzgDrrnaasKqGaJHCDz+c0RGH/Pua1QwiuPYM68hRXrQH/pp3OWzOLmL
+      KKndOPkx5MSIp/CyhhRMYF/8NgCBQ5/DLU57n2UNKdaPaBSQk1twKwt4iuF6ppgaQO7Z02ld
+      UXQkPeJNlxoVzyIKJBB20zPVXBsQaAd+jMDTfwf7wp/jLJ8D28C6+G3PZBJOW/FXlV8dfQLh
+      WjjTr9Ax1Tp5oCF3b0eKDSCaJdz8GMgaOCba/Z8g8MH/HQArmsS6+G3U0cfRd70PSQ3gHPpx
+      muk3Ec0iSv8Bgk//IvJ11p3Q/o/C/o9e9Tdz+7O0Zo94puBmGQMAuLVlnMXjKD17kJJbb3xG
+      Y2XuHa45SBJWE2fuLVA0b/B7ydy7EKJd4V1EPYcwyrjleZBkRKOAMvQgbnEauWsbcmrX5eaV
+      6yDqWSQ9Anq0/aXjbQrp/HVXLsZJHwUBysgj4Jg4c28hhbuQU7sQRgUp0oMwyp5Z5HrTjHJy
+      C3JqJ87cm57PffcOpHA3ODZueQ5kFTk+iGjVkAIxcB2EbXizT5fM5AjhvR+OhbAaiGYRd/kc
+      QrjIiWHUrU93pnLlUDfCKIEeRRhl5EgPcv8+kFRwTUSjgKSFEHYLKdKH1I4j1MnLSwfXQkCr
+      6g3CI6mbNl3q7UU+7uX/ZlIAH5+bje8K4XNP4yuAzz1NxwRa2SZ2q3Ec55rnel35/aW/X+u3
+      zZTmet4ReM9p1vp/s6a5MhT7zS6zTrqNHgOsROq69CVXXvRKQV3X7QRbvTJjbmaatTJz5X7X
+      usd7SbPy/ivTtSvXXCnjzUhzNVmuVLSNTnNl3t1ImivL+dJrr5ZPV9aNlXQbbgKtnEauqiqa
+      pjE9OU6xXEVun1WF02JifIKLF85huN60aSmf5cLF86QXl71TDVWJ+ekJzpw7T73lnfbYrJaY
+      X1xidn7B2+upqizMTTM1PUUmV/RORDcbzM6nOXn6DELy5MgXCmQzi6QXM55MwiBfqTNx8QKV
+      po2u61jNGuVyiYsXLtJyvUP45memyOaLyLIntyq5TE5MMHbxAhXDO3myXily7sIF5tJLnkyK
+      wmJ6jqXFBYqVunc6pVFndj7N7Jw3K6NpGmbLoF6vMzM378kk2YyPT2IbNbJV05N7eYnp6Slm
+      0otenigS8/NznDh5EsP0Tn9UhMXMXJoTJ0/iCAlVVckXCpTyy0zPr6YrFEtMjY+RK1VRVZVq
+      uUy5mOPixDTIXhmslJPSLjdhG4yPjTN28QINR0LXdYq5djktZT25FYm52VkW0/PUDMsrA9s7
+      cHB8ahpd1708sExqtRpTM3NtmWB6aopmo7EqUzHP9NQU4zNpVFVF13UW52c5d/Y0xZqBpmm0
+      GhUq1Qrj4xNY4tLyXSC9mEHXdWoNm3Ixz4WxCYSs3P4xgBYMEw2qFEueS4AQDqZpIoTAcjzN
+      bhpNFD2MIq+sCro0jRbd3SkaDW+l1bIsXMehZa4uxih6iGQigW0aAOihKEFVRtUDqLLX4lhG
+      nXLDRKY95SjJFJbm0MJRTNub01dUhcX0PJaz2lJJWoBUIky2UGw/zcUyTRzXxW4v0BhNA0nR
+      0bXVbDZNC8d1sCxvpdZxbFxnJa33fsViEVVVL+muBdFkiuLyApbtyekISHalUFbklhWSsQiW
+      C5FQ29dKDZII6whZI6h7U4iu1SJTrBFQ2/eWJCqFZaoNA7k99RlQJaZm5kGWOiHxtWCYWEil
+      sFJO7mo52e1yMowmihZCkVanb1umjevamJaXJ41KERsF5ZKWuFQsoqgqsrz6vsFIHKNaoNny
+      8sm0bCLJLkLaqgnT1ZXEtByi4ba7CbCQXiASCXfqjmU0KNVXy1eTbGZm5xFISEi3XwEcs0mx
+      XKVU9jJWllUSyS7iAajUvWNQbdsmHAzQMldiPQpQA56bQbvQWq0WwhVo+qrPfbNe9QqpHXDJ
+      bDWxhURYMlmutNrpTCLhMNbKRn1JwkFHE+Yl5yFIJLp6ieoOlbrZlttgMVemXmv78giBpAaI
+      h1eDsIbCYbrjERaWsh25bduiXKlhto94VVSNQEDDNg1a7UrSbNQpVmqsLCgJISgVCtgohILe
+      +4UCOmbLIF8stzPSYiGTY8eWEabmPH8e7DqZYp3eqEa24jUCwWCQrniUTK7QFsmlZQuGR0ao
+      N2qdvOzpH0By7M5id0hTKJSqLCx49xaOjaQFGOiJU2+aHTnj0TD1htG+t4PtOESjMerthqph
+      tFicnaTWbHXySdc1KuUypXLbIdB1KRXzSHoI2hVXlgRmq0W9sZquWqszMDDAxOSEl8yxkbUA
+      ARUM01Mc27JIxCI0259RVPr6B3DMOi3Luf3u0JFwhKbZIhJtewIqGomuJBElSkV4hZ1IdBMK
+      B5lbbFckWSUS1DEth552hUvE4yRDUaYmpy+5d5hWq0Uk4fmqqIpCsqsbJRHG1bxXT3SliAR1
+      0rmSl0jRiQQUTMehO+QteimKSrK7G7Urgq0qq+lCAdLL7YqkaIQDqpcu6KXTVJVUXxJNX/F+
+      lejtHyIQUGm0C1JTFJKpXuKRELrqKXNXqpdQQCNT8ApNUgOEdBnTlekLenKrmk5vsht9xbNW
+      VunvH0ARJoFAWwmVIGFdwXQFvW3FUVWN3r4utJV0kuKlw8LSvXSRaIRytoiqB1lpqPVQhFQs
+      RqAdZVkNhhkeGsIoLRGJejJFIxHK9SahcKSTl4MDA0h2g1DQW+wLR2JEunupV2udclI1nb6u
+      1Oq7KBqDA4NIToNgINq5d61Q7jwfIBiOErtEpmA4wtBQlHI2TVe33ElXbbaItGXSsUn29BIJ
+      B9FUGcQdwHw6LVqt1uoXji3m0/PCtJzOV8uZRVFtGJ3PpmmK+fS8sG1bCCGE6zrCKGXEfK7W
+      uca2bTEzMy0su30f1xW2UReTcwuXPMoWs3OzomVal8k0MTl5uZCWISZm5i+Xe25aNE27c2/X
+      dcXU1JRw3ZWvXFEvZcRSoX7ZNdPTU8JZuUgI4bYq4vzUwmX3npqcEEbLk8l1HGHZjphPp1fF
+      sSxRyC2JmmF17m1Z9mXXCOEK0zTF+MSEcNvPcx1H5JbmRbZUX72XaYrJyQlhO6syGaVFMbNc
+      Xb2TY4uxiQlxidjCbNbE1Owlz3NdT+5Lys22TDE+OXXZNdXsnEjnG5e973JmUdQuKV8hhJhP
+      z3fKxXUd0SxlxHx+tXwt0xRz6XSnDgjXFWajKuYWl4Vzybu8q34ZFTGzWBCO44rbbgLNTU+C
+      EJw5fxEAu1VjbHIWt5ZlJu85Pi2l5zAth7PnznmJ7Aanz14A22Z8znOYmhkfY6HUZHlhpnPv
+      s6dPks0XGZ+YBKCUTfP2ybOUc0vkap45df78OTJLy4xPTLTvbfDmm28xn17wTrsBWvUSbx4/
+      w0J6tmODz4yfp5xNc2oy46Vr5jk/OUMhm2V6yRsXXBy7yGKmSHp+yrtGuJwfG6daLXNx3JMp
+      Mz/F2MwizfIy1ZbTlukCRqvF5ErXXlvizVNjuI6L0TaTLpw/S7VuUK20TSC7ybHjJ3Fsu2Ne
+      iFaJd46+Q6mQ6+TlxNgFJmYXSM9Pe+kckzOnT5EvlJiYngVgcXaK4+ML5BcmsdrOgefPn6dU
+      yHK+LbdRzXLq5CkymQzZqtWRKZbo4vz5cx2ZTp0dI6oJphY8j9O5yTEqbojM3FinnFbK98xK
+      +boW4+MTYBmMzS52ynex1GQ5vVq+58+dwbEF45Or5Ts2u4Rdy5Fpm7jpuRkQgpNnPffrarnK
+      9HKZ/OIkddO5/WOAYCiEqqoMDQ0BoGhBArqMFu2hP9Hu2kJBFEVluH0NSojeriiW1SLZdqsY
+      GOxDVnQ0ZfWVent7GervJZnsAiAS76K/v59EPEEs5HXbfb09DA8PEY+13TPUADu2DqHrQfS2
+      maSHYoz0dxMMxVDb9+8fGkZWA/Ql2919qAvZKBOOJ+nt8rrtkYFeSnWDni7v+UgyUU2gqEF6
+      Up6Lbu/AENVCHtQQUd27d28yTKFYIpnqB0AOJhjojnqzTe2BYl9vL4FAEE1tW7GKzkBfioCu
+      rw4w9QSBoIKi6AwkvYFib6oLTdMJBttyyxrhoIamKqR6PJlSqSQSMj2pHpT286IhjUgsRU93
+      VztP4iDJDPSliAY9s3B0ZJh6rUoslmjLFGSwN4FhC2JtU3VgZASrWScciXXKKdGVYnBoiJHB
+      /rZMKoODAwwPj9AV8+QcHh1hcGiEkL5qtW/dvpOh/m6U9jbTeHcfW7eMEgoGCLYnHoLBIKqq
+      Mjw4CEA44A19e3sHCGry7VeATGYZSYJs1mshrEaJYtXCqOSom94IbDmzjCTLZJfbGz9cg2yh
+      RkBTO4OrbCaLrMi0Wkbn3svZLIqqUCh6LXKzVqbecrGaFRrt1jabzaKoKvn2NVg1ZhYrjPSE
+      mc95g7J6aZlSExK6TbHh2eVTU9N0D2yhlG1vY7Sb1C2NmO6SL9fbMi0zMDhILrfiby8olBuk
+      uuLk8p5rd3F5icTAFjS3QcP0WttMtsiunTvJZb3eTQiLUrGGWcmwVPEGnOViEVeSmJ2bbd/a
+      pVAoIZwW80vtfLKq2FKUVFQh1x4E5/IFBgYHaXQG7zb1lmCgt5tC3hvP5LN5+gcHKOSXOzNT
+      5WqDVFeM5aw3DjMbFdRoCrdeoGKs5GUOWVFW31dY5AplVBwyeW+MVcplcSSZXH51D8Ly0gIL
+      6QXmF9ruz67N9PQM6fQcxYqXl+V8joXFRfKlcifdYnqW5VyBWr09eG9UmZ2b906vbOfl8rJX
+      d1bkzpdNHKBYyGK73P4xgNkyxNTUlDCtFVveFbVqWUzPzosVK862TDE3O3PZGKDZqImp6emO
+      rec6tigtp8V8rtK5pmU0xdTUVGcM4LquqJXyYjq91Lm3ZbbE1NSUMC4ZAzTqNTE1PdOx013X
+      FbVyQUzPXyVdy7xmOse2RG5pTmSKq3ar0Wx4Mjn/f3HntRw3joXhjzl0ULJkaSzv+z/Q1I6z
+      lWW1OjAnpL0gm93W2DNTW1trXrL4gwfnB3ECDoGtTMrk64W5flyObW91svN/tSmL3Hy9vhl9
+      eSk683B3Y5K83tNJab5eXY2+/I9wSgrzeH9j1nn1FzhlsuWjuXna7MlU/5mnLDFXt/c7nqQw
+      m/XqO50IIcxy+WzEgFNKmrZMzXO6e7+Uwmw2a1M3P8dpJU1XpWaRVC+eWRohdnGC7GqzWG3G
+      vrzkV2tl8tU3c/1tbbQxvz4GWK+e8cPJ6Mtq2fK83HAQuyRDyjFN1hjbox7SdBjFYrFkOp2S
+      ZP29Kk/JO40ROwuwXi4I4hlZ2s8+sq1YJgUT36Js+pk8Wa9w/JAyH2ZELXl6euZgGpHkvXWR
+      Xc1ykzMNLIp6wG3WOF5IWeQjbrF4Zr6HK7KEWlrIrh7kNqyWC6LpAVnSy9TVBeuiIbD1mAbd
+      rFd4QUwxyiR4Wiw5mgZsil4nedrn05t6+AXTaJbPz0wmM9J0N7s/PS05nAZsit4nzpINwjh0
+      dfUDXM9BU2QktcQxYvxBaL1a4kcveFolzCOXtOxjgHS9Iq9a8jwfeXq4v+vfW9YjT4tNTlPt
+      skDpetXHM6NVUjzc3wMWWVGNuKd1RlvvcM9PD3SqrzDu+a25e1hg6Y66UyNPbdey2fT6buuG
+      TVaSJxu0/gUrwS+vvGrxLMHNQx9Mqq4EL2T97Y5kUGySFkxDl6ubXpkoQactmmzJ06bvfJok
+      xJMJV9e7IKloBLaquRvy8G2V44Yxi/sbymGBJSkqJp7F19vBlVEN0vLI199Ypr3yuyrHCWKe
+      H24otri8ZBLs41oEHuX6iedkMNtpRhxHezIZqlZh2pyHRe8ClVlGEE14vLumFf1gy8qawFFc
+      3/cBoJE12glJnu5YDQM5SXOmkc/VzW3ftJY0EkS54dvgbiBrlBOQLu5Z5e0o0yTyubrZuk6K
+      RhpElfBtSAVnyYZ4OuX25np0gfKqxTMdtwNPsimwvIj1t1vSeuAp63n6OvLU0WmHOl2y2OQ7
+      nuKY6z2etrjv+bWp/4bfshHYcsdv8wN+07wijmKKbHDBcoGyPUJP00r9/98V4uWlugZ/esTB
+      JCSKIizbIUsz3r69xHEDQt/BMgptB5wczvtDziybKs94df6G0PeJQh/H1zTdNgAABZVJREFU
+      sShazW9nJ+NBaKKtiA9OmUU+URRh2zZZXnJ5eYHnBfiujVEC259wNJ/2ONuhyBIu3lzieT5R
+      4GE7DllW8ubytxGHElh+/AKXcv7mEt/ziAIPxzLUEs5fHY8ydXXJ7PicSegNR4jaZGXD5cVr
+      vCDAdWy0aHHjOYfTeGw7S1Iu//UW1/WJfBfLaAQup8cHg04s6irn+Ow3It8jCgOwHPI04fLt
+      W1yvx9lohHE5PT4cZLJoqpyj0wuiwCMKQ1zHJq8Ev533gbZt91YsnB4z3/LkOGRZzuXbSxzX
+      J/QcMBLthJwczr7j6fT8DYHvEQU+rg1lp7nY4+kf8Wv/hN/DHb/Olt83+/x2BPGcMPCI4xjP
+      0TRCczSf9n37JaN+70rykjZfc3XXrzDKJkfbHtef/mA9mPvVJsVSDR++DF+/aqmE4fnhisdh
+      1lovV/iuxe/vdum1rKgpN0/cDMFVXaRYjsfnD+/JBxdonWTotuDz9TCTyopGOTxcfeJp05vb
+      pkixXJcvH9+RDbPdKsnQbcnnqy2uplEWj9c73Hq1xrMN//4wpFgx5HVHtnrk9rEPVPNkjeu5
+      fPjwgWawAJusQJQpX25662K6EonL7ed344ruapNga8H7z0OKVUvKVrH6dsv987A4J0o643L3
+      5T3Pae+CrNYJNoJ3n7apWUXZKNZPd9wPVmmzWuEHLn+8/4DcC4KbfMXVXW+VRJVhbJerj3+w
+      GVzV1TrFkjUfv2556qgELO6/8rjMRp34rsXv7z+NPC1/xu/9FY+DNVuv/hm/tuvx+eOf+d1a
+      6jRv8XyXDx8/0Un96z+AOPDolOHstE/BOcEE1VbY0SGvj/ovfT6NKBvB6+EZHA8XiXECzk/7
+      tNzBwZyiLDl/fTa2HfoO0licnfb3gnhKV5dEs2MOp/1q7SwOqYXi7NW27RBbteBPuDjpU6NB
+      1OPC6RHH0yHlNulxp6fDjghOgKM78Cacv+px8/mMoqw5P9vKZOE7oIzF6+FePJ1TlwXzwxMm
+      QZ/im0Q+rdRjfy0v6n8LDA+4OO7TggfTCVXT8nroG7aDZ2mM7XH+6qS/50VYsoZgzsVJn5qd
+      zyaUdcvrs6G/loNna7Tl8nroy/zggCIveHVyOqaVX/LkhhNkW+HGR5wdbHmKqRo5PoPt4SIw
+      Tsj5q8M9nVRcnO12ajiY/IRfN+D81dEg05yirP6W37b6a36nsUdVFBwfnxD6/8PzAf7bqxMd
+      jmehhjofoyRCKixbDIswNqITaOyxoAqj6TqJbTnjvU4ItNLjEZkAXdvhBQ56OC9WSYlUClt3
+      KGXABSE6jO3RqaFWxCg6IXEsxmI4pSRSamwjxhmx6wTGdunkbruSVkhsyxoXy4QQaK32aph6
+      XGA74xm2SkmU0mjRobUBx0J0Asu1kMPOBQzFZA5qXJgSokMpi3Zb42IMXSeG98s9nMZFDX1x
+      h6LBXo6tLttOENrWWKAnZF9Y2Ilu/L296zocPxh12fOksaw9nkSHwqET3xfD2YGNGHS5bXu/
+      aFGIF/zqP/O7LXb87/nt25HKoJRGig79K8qhX15CSGwvBN13QiuBVJrj+ZR0MK2tEP0+kttq
+      Qa0RSjKZzqiHbMauGG7307pQEjeIUUNmSIoOpTTzWTwGSZ2QYLs41rbSVCKU4mA+oxiKupTs
+      qzwPZjFlIwacANvFHStUFUIq5rMpxZDxaNoOY8AbF28MUkm8aIZohwC7bdFaM5lEtHL3MVuu
+      j2V6GY2SCNX7rekQBLedAMvq61kATF+FGk1mNPVum0ahFIfz2VhY2A88C9d19mRShPGMthl0
+      2bQYY4iisB9I9APX8cJxfyMtBVIpDucTskrsyeSwa3pXDFfVO51o8z1PW363i3yYfX7rn/Mr
+      f8Cv1sx+yG//UbZSY7QmiiOE1PwHCwraxYlYigwAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
